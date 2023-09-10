@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clickable Name Column with OpenStreetMap</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Add Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <style>
+        /* Set the map container height to 100vh for 100% viewport height */
+        #map {
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <!-- Left column occupying 20% of the screen -->
+                <h1>Роботы</h1>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="clickable-name" data-robot="Pixel">Пиксель 1</td>
+                        </tr>
+                        <tr>
+                            <td class="clickable-name" data-robot="Los Angeles">Пиксель 2</td>
+                        </tr>
+                        <tr>
+                            <td class="clickable-name" data-robot="Chicago">Пиксель 3</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-9">
+                <!-- Right column occupying 80% of the screen -->
+                <div id="map"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Leaflet JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        // Create a map and set its center and zoom level
+        const map = L.map('map').setView([40, -95], 4); // Centered in the US
+
+        // Add a tile layer (OpenStreetMap)
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Handle the click event on the clickable-name cells
+        $('.clickable-name').click(function () {
+            const robot = $(this).data('robot'); // Get the city from the data attribute
+            let coordinates = getCoordinatesForCity(robot);
+
+            if (coordinates) {
+                // Clear existing markers and polylines
+                map.eachLayer((layer) => {
+                    if (layer instanceof L.Marker || layer instanceof L.Polyline) {
+                        map.removeLayer(layer);
+                    }
+                });
+
+                // Create an array to store marker positions
+                const markerPositions = [coordinates];
+
+                // Create a marker at the city's coordinates and add it to the map
+                const marker = L.marker(coordinates).addTo(map);
+
+                // Simulate a fetch request to the "get_path" route after a delay (e.g., 10 seconds)
+                setInterval(() => {
+                    // Replace this with an actual fetch request to your server
+                    // Make sure to replace 'your_server_url' with the actual URL
+                    fetch('http://127.0.0.1:5000/get_path')
+                        .then((response) => response.json())
+                        .then((data) => {
+                            console.log("outside");
+                            if (data) {
+                                console.log(data);
+                                data = data.path;
+                                coordinates[0] += parseFloat(data[0]) / 750000.;
+                                coordinates[1] += parseFloat(data[1]) / 750000.;
+                                markerPositions.push([...coordinates]); // Add the new position to the array
+                                marker.setLatLng(coordinates);
+                                map.setView(coordinates, 100);
+
+                                // Create a polyline to show the path
+                                const path = L.polyline(markerPositions, { color: 'red' }).addTo(map);
+                            }
+                        })
+                        .catch((error) => {
+                            console.error('Error fetching data:', error);
+                        });
+                }, 2000); // Wait for 4 seconds before making the fetch request
+
+                // Set the initial view when the marker is created
+                map.setView(coordinates, 100); // You can adjust the zoom level as needed
+            }
+        });
+
+
+
+        // Function to get coordinates for a city (you can expand this as needed)
+        function getCoordinatesForCity(city) {
+            const cityCoordinates = {
+                'Pixel': [55.75432, 37.61206],
+                // 'Los Angeles': [34.0522, -118.2437],
+                // 'Chicago': [41.8781, -87.6298],
+                // Add more cities and coordinates as needed
+            };
+
+            return cityCoordinates[city];
+        }
+
+        $('.clickable-name').first().click();
+    </script>
+</body>
+
+</html>
