@@ -1,7 +1,7 @@
 # Ridley
 Maestro Of Robots
 
-# Запуск ROS2 модуля
+# Запуск модуля
 1. Запускаем flask-cервер из папки src/py_srvcli/py_srvcli/:
    ```
    flask --app flask_server run
