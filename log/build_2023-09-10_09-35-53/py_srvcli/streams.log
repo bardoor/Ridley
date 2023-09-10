@@ -1,0 +1,23 @@
+[0.536s] Invoking command in '/home/barten/ros2_ws/src/py_srvcli': PYTHONPATH=/home/barten/ros2_ws/build/py_srvcli/prefix_override:/home/barten/ros2_ws/install/py_srvcli/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/py_srvcli build --build-base /home/barten/ros2_ws/build/py_srvcli/build install --record /home/barten/ros2_ws/build/py_srvcli/install.log --single-version-externally-managed
+[0.735s] running egg_info
+[0.735s] writing ../../build/py_srvcli/py_srvcli.egg-info/PKG-INFO
+[0.735s] writing dependency_links to ../../build/py_srvcli/py_srvcli.egg-info/dependency_links.txt
+[0.735s] writing entry points to ../../build/py_srvcli/py_srvcli.egg-info/entry_points.txt
+[0.735s] writing requirements to ../../build/py_srvcli/py_srvcli.egg-info/requires.txt
+[0.736s] writing top-level names to ../../build/py_srvcli/py_srvcli.egg-info/top_level.txt
+[0.738s] reading manifest file '../../build/py_srvcli/py_srvcli.egg-info/SOURCES.txt'
+[0.739s] writing manifest file '../../build/py_srvcli/py_srvcli.egg-info/SOURCES.txt'
+[0.739s] running build
+[0.739s] running build_py
+[0.739s] running install
+[0.739s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[0.739s]   warnings.warn(
+[0.740s] running install_lib
+[0.741s] running install_data
+[0.741s] running install_egg_info
+[0.743s] removing '/home/barten/ros2_ws/install/py_srvcli/lib/python3.10/site-packages/py_srvcli-0.0.0-py3.10.egg-info' (and everything under it)
+[0.743s] Copying ../../build/py_srvcli/py_srvcli.egg-info to /home/barten/ros2_ws/install/py_srvcli/lib/python3.10/site-packages/py_srvcli-0.0.0-py3.10.egg-info
+[0.744s] running install_scripts
+[0.762s] Installing client script to /home/barten/ros2_ws/install/py_srvcli/lib/py_srvcli
+[0.762s] writing list of installed files to '/home/barten/ros2_ws/build/py_srvcli/install.log'
+[0.787s] Invoked command in '/home/barten/ros2_ws/src/py_srvcli' returned '0': PYTHONPATH=/home/barten/ros2_ws/build/py_srvcli/prefix_override:/home/barten/ros2_ws/install/py_srvcli/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/py_srvcli build --build-base /home/barten/ros2_ws/build/py_srvcli/build install --record /home/barten/ros2_ws/build/py_srvcli/install.log --single-version-externally-managed

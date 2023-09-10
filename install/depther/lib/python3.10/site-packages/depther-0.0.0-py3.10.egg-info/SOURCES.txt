@@ -1,0 +1,17 @@
+package.xml
+setup.cfg
+setup.py
+../../build/depther/depther.egg-info/PKG-INFO
+../../build/depther/depther.egg-info/SOURCES.txt
+../../build/depther/depther.egg-info/dependency_links.txt
+../../build/depther/depther.egg-info/entry_points.txt
+../../build/depther/depther.egg-info/requires.txt
+../../build/depther/depther.egg-info/top_level.txt
+../../build/depther/depther.egg-info/zip-safe
+depther/__init__.py
+depther/publisher_member_function.py
+depther/subscriber_member_function.py
+resource/depther
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py

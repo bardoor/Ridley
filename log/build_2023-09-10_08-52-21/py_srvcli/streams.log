@@ -1,0 +1,29 @@
+[0.571s] Invoking command in '/home/barten/ros2_ws/src/py_srvcli': PYTHONPATH=/home/barten/ros2_ws/build/py_srvcli/prefix_override:/home/barten/ros2_ws/install/py_srvcli/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/py_srvcli build --build-base /home/barten/ros2_ws/build/py_srvcli/build install --record /home/barten/ros2_ws/build/py_srvcli/install.log --single-version-externally-managed
+[0.770s] running egg_info
+[0.771s] writing ../../build/py_srvcli/py_srvcli.egg-info/PKG-INFO
+[0.771s] writing dependency_links to ../../build/py_srvcli/py_srvcli.egg-info/dependency_links.txt
+[0.771s] writing entry points to ../../build/py_srvcli/py_srvcli.egg-info/entry_points.txt
+[0.771s] writing requirements to ../../build/py_srvcli/py_srvcli.egg-info/requires.txt
+[0.771s] writing top-level names to ../../build/py_srvcli/py_srvcli.egg-info/top_level.txt
+[0.773s] reading manifest file '../../build/py_srvcli/py_srvcli.egg-info/SOURCES.txt'
+[0.774s] writing manifest file '../../build/py_srvcli/py_srvcli.egg-info/SOURCES.txt'
+[0.774s] running build
+[0.774s] running build_py
+[0.774s] copying py_srvcli/client_member_function.py -> /home/barten/ros2_ws/build/py_srvcli/build/lib/py_srvcli
+[0.774s] copying py_srvcli/flask_server.py -> /home/barten/ros2_ws/build/py_srvcli/build/lib/py_srvcli
+[0.775s] running install
+[0.775s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[0.775s]   warnings.warn(
+[0.775s] running install_lib
+[0.776s] copying /home/barten/ros2_ws/build/py_srvcli/build/lib/py_srvcli/client_member_function.py -> /home/barten/ros2_ws/install/py_srvcli/lib/python3.10/site-packages/py_srvcli
+[0.776s] copying /home/barten/ros2_ws/build/py_srvcli/build/lib/py_srvcli/flask_server.py -> /home/barten/ros2_ws/install/py_srvcli/lib/python3.10/site-packages/py_srvcli
+[0.776s] byte-compiling /home/barten/ros2_ws/install/py_srvcli/lib/python3.10/site-packages/py_srvcli/client_member_function.py to client_member_function.cpython-310.pyc
+[0.777s] byte-compiling /home/barten/ros2_ws/install/py_srvcli/lib/python3.10/site-packages/py_srvcli/flask_server.py to flask_server.cpython-310.pyc
+[0.778s] running install_data
+[0.778s] running install_egg_info
+[0.780s] removing '/home/barten/ros2_ws/install/py_srvcli/lib/python3.10/site-packages/py_srvcli-0.0.0-py3.10.egg-info' (and everything under it)
+[0.780s] Copying ../../build/py_srvcli/py_srvcli.egg-info to /home/barten/ros2_ws/install/py_srvcli/lib/python3.10/site-packages/py_srvcli-0.0.0-py3.10.egg-info
+[0.781s] running install_scripts
+[0.798s] Installing client script to /home/barten/ros2_ws/install/py_srvcli/lib/py_srvcli
+[0.799s] writing list of installed files to '/home/barten/ros2_ws/build/py_srvcli/install.log'
+[0.821s] Invoked command in '/home/barten/ros2_ws/src/py_srvcli' returned '0': PYTHONPATH=/home/barten/ros2_ws/build/py_srvcli/prefix_override:/home/barten/ros2_ws/install/py_srvcli/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/py_srvcli build --build-base /home/barten/ros2_ws/build/py_srvcli/build install --record /home/barten/ros2_ws/build/py_srvcli/install.log --single-version-externally-managed

@@ -1,0 +1,6 @@
+source;share/depther/hook/pythonpath.ps1
+source;share/depther/hook/pythonpath.dsv
+source;share/depther/hook/pythonpath.sh
+source;share/depther/hook/ament_prefix_path.ps1
+source;share/depther/hook/ament_prefix_path.dsv
+source;share/depther/hook/ament_prefix_path.sh

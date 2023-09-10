@@ -1,0 +1,41 @@
+running egg_info
+creating ../../build/depther/depther.egg-info
+writing ../../build/depther/depther.egg-info/PKG-INFO
+writing dependency_links to ../../build/depther/depther.egg-info/dependency_links.txt
+writing entry points to ../../build/depther/depther.egg-info/entry_points.txt
+writing requirements to ../../build/depther/depther.egg-info/requires.txt
+writing top-level names to ../../build/depther/depther.egg-info/top_level.txt
+writing manifest file '../../build/depther/depther.egg-info/SOURCES.txt'
+reading manifest file '../../build/depther/depther.egg-info/SOURCES.txt'
+writing manifest file '../../build/depther/depther.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/barten/ros2_ws/build/depther/build
+creating /home/barten/ros2_ws/build/depther/build/lib
+creating /home/barten/ros2_ws/build/depther/build/lib/depther
+copying depther/subscriber_member_function.py -> /home/barten/ros2_ws/build/depther/build/lib/depther
+copying depther/publisher_member_function.py -> /home/barten/ros2_ws/build/depther/build/lib/depther
+copying depther/__init__.py -> /home/barten/ros2_ws/build/depther/build/lib/depther
+running install
+/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+running install_lib
+creating /home/barten/ros2_ws/install/depther/lib/python3.10/site-packages/depther
+copying /home/barten/ros2_ws/build/depther/build/lib/depther/subscriber_member_function.py -> /home/barten/ros2_ws/install/depther/lib/python3.10/site-packages/depther
+copying /home/barten/ros2_ws/build/depther/build/lib/depther/publisher_member_function.py -> /home/barten/ros2_ws/install/depther/lib/python3.10/site-packages/depther
+copying /home/barten/ros2_ws/build/depther/build/lib/depther/__init__.py -> /home/barten/ros2_ws/install/depther/lib/python3.10/site-packages/depther
+byte-compiling /home/barten/ros2_ws/install/depther/lib/python3.10/site-packages/depther/subscriber_member_function.py to subscriber_member_function.cpython-310.pyc
+byte-compiling /home/barten/ros2_ws/install/depther/lib/python3.10/site-packages/depther/publisher_member_function.py to publisher_member_function.cpython-310.pyc
+byte-compiling /home/barten/ros2_ws/install/depther/lib/python3.10/site-packages/depther/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/barten/ros2_ws/install/depther/share/ament_index
+creating /home/barten/ros2_ws/install/depther/share/ament_index/resource_index
+creating /home/barten/ros2_ws/install/depther/share/ament_index/resource_index/packages
+copying resource/depther -> /home/barten/ros2_ws/install/depther/share/ament_index/resource_index/packages
+copying package.xml -> /home/barten/ros2_ws/install/depther/share/depther
+running install_egg_info
+Copying ../../build/depther/depther.egg-info to /home/barten/ros2_ws/install/depther/lib/python3.10/site-packages/depther-0.0.0-py3.10.egg-info
+running install_scripts
+Installing listener script to /home/barten/ros2_ws/install/depther/lib/depther
+Installing talker script to /home/barten/ros2_ws/install/depther/lib/depther
+writing list of installed files to '/home/barten/ros2_ws/build/depther/install.log'
